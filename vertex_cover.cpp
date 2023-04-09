@@ -22,8 +22,8 @@ int main() {
             if (graph[i][j] && !visited[i] && !visited[j]) {
                 visited[i] = true;
                 visited[j] = true;
-                cover.push_back(i+1);
-                cover.push_back(j+1);
+                cover.push_back(i);
+                cover.push_back(j);
                 break;
             }
         }
@@ -38,7 +38,7 @@ int main() {
 
     cout << "{ ";
     for (int i = 0; i < cover.size()-1; i++) {
-        cout << (char)('a'+cover[i]) << " ";
+        cout << (char)('a'+cover[i]+1) << " ";
     }
     cout << "}" << endl;
 
